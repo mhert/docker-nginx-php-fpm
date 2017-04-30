@@ -1,4 +1,4 @@
-FROM nginx:1.11.13-alpine
+FROM nginx:1.13.0-alpine
 
 ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/docker-entrypoint.sh"]
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
