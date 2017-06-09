@@ -3,7 +3,8 @@ FROM nginx:1.13.0-alpine
 ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/docker-entrypoint.sh"]
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
 
-ENV PHP_FPM ""
+ENV PHP_HOST ""
+ENV PHP_PORT ""
 ENV DOCUMENT_ROOT "/var/www/"
 ENV FRONT_CONTROLLER "index.php"
 
